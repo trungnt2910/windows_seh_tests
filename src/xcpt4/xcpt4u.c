@@ -2326,7 +2326,7 @@ outside:
         double doubleresult;
 
         _controlfp_s(&PreviousControlFp, 0, 0);
-        _controlfp_s(&PreviousControlFp, PreviousControlFp & ~EM_OVERFLOW, _MCW_EM);
+        _controlfp_s(&PreviousControlFp, PreviousControlFp & ~_EM_OVERFLOW, _MCW_EM);
 
         Counter = 0;
         __try {
